@@ -1,0 +1,59 @@
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+html {
+	background: #cdcece;
+}
+.couv {
+	max-width: 720px;
+	font-family: Georgia, serif;
+	margin-bottom: 4rem;
+
+}
+
+.couv-top {
+	padding: 5% 0  1rem 2rem;
+	background: #fff;
+	position: relative;
+}
+.couv-number {
+	position: absolute;
+	border-radius: 50%;
+	background: #000;
+	color: white;
+	display:flex;
+	flex-direction: column;
+	right: 3rem;
+	width: 6rem;
+	height:6rem;
+	bottom: -3rem;
+	align-items: center;
+	justify-content: center;
+}
+.novalue {
+	line-height: 0.8;
+	font-size: 4rem;
+}
+.couv-description {
+	font-style: italic;
+	font-weight: normal;
+	margin: 0;
+}
+.couv-main {
+	padding: 50% 6rem 6rem 1.5rem;
+	background:green;
+}
+.couv-author {
+	color: white;
+	font-size: 2rem;
+	margin: 0 0 1rem;
+}
+.couv-title {
+	border-top: 1px solid;
+	border-bottom: 1px solid;
+	font-family: "Six Caps", sans-serif;
+	font-size: 10rem;
+	font-weight: normal;
+	text-transform: uppercase;
+	margin: 0;
+}
