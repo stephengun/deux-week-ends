@@ -1,0 +1,34 @@
+p {
+ text-align: center;
+ font-size: 40px;
+ word-spacing: 10px;
+ letter-spacing: 10px;
+ padding-top: 50px;
+ color: black;
+ font-family: 'Poiret One', cursive;
+}
+
+h1{
+ text-align: center;
+ margin-top: 100px;
+ font-family: 'Poiret One', cursive;
+ font-size: 40px;
+}
+
+h2{
+	text-align: center;
+	font-family: 'Poiret One', cursive;
+	font-size: 30px;
+}
+
+body{
+	background-color: white;
+}
+span{
+	border-radius: 50%;
+	border: solid 2px #d2b243;
+	background-color: white;
+	padding: 50px;
+	margin: 20px;
+
+}

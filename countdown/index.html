@@ -1,20 +1,50 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-	<title>Fin de la Promo</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="css/styles.css" rel="stylesheet">
+    <title>Fin de la Promo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
 </head>
 <body>
+    <h1>Eh ben, le temps passe vite ...</h1>
+    <h2>Notre Promo finit dans ...</h2>
+    <p id="chrono"><span></span>:<span></span>:<span></span>:<span></span></p>
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+    var countDownDate = new Date("sep 29, 2017 10:41:25").getTime();
 
-	<h1>Eh ben, le temps passe vite...</h1>
-	<h2>Notre Promo finit dans...</h2>
-	<div>
-		<span>..</span><span>jour(s)</span>
-		<span>..</span><span>heure(s)</span>
-		<span>..</span><span>minute(s)</span>
-		<span>..</span><span>seconde(s)</span>
-	</div>
+    var temps = setInterval(function() {
+
+        var now = new Date().getTime();
+        var distance = countDownDate - now;
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        for(i = 1; i < 5; i++) {
+        	if(i == 1) {
+        		$("span:nth-child(" + i + ")").text(days);
+        	}
+        	else if(i == 2) {
+        		$("span:nth-child(" + i + ")").text(hours);
+        	}
+        	else if(i == 3) {
+        		$("span:nth-child(" + i + ")").text(minutes);
+        	}
+        	else if(i == 4) {
+        		$("span:nth-child(" + i + ")").text(seconds);
+        	}
+        }
+        //document.getElementById("chrono").innerHTML = "<span>"+days + "Jrs </span>" + hours + "Hrs "
+        //+ minutes + "Min " + seconds + "s ";
+
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("chrono").innerHTML = "C'est le jour J";
+        }
+    }, 1000);
+    </script>
 </body>
 </html>
